@@ -95,8 +95,18 @@ form {
 
 form input {
     background-color: #F1F5FA;
-    padding: 8px 10px;
+    padding: 8px 0px 8px 10px;
     border-radius: 5px;
+    width: 150px;
+}
+
+form button {
+    padding: 0px 5px;
+    cursor: pointer;
+    background-color: #59A7F2;
+    color: white;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
 }
 
 /* Content */

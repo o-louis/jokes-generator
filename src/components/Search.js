@@ -5,10 +5,10 @@ const Search = ({ input, handleChange, handleSubmit }) => {
         <form onSubmit={(e) => handleSubmit(e)}>
             <input
                 text="type"
-                placeholder="Search a text..."
+                placeholder="Search a word..."
                 value={input} onChange={e => handleChange(e)}
             />
-            <button type="submit"></button>
+            <button type="submit">Go</button>
         </form>
     )
 }
