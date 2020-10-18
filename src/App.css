@@ -17,15 +17,14 @@ a {
 }
 
 #root {
-    width: 100vw;
-    height: 100vh;
+    min-width: 100vw;
+    min-height: 100vh;
 
     display: flex;
     align-items: center;
     justify-content: center;
 
-    
-    background:linear-gradient(45deg, #11A49B, #90FC8E);
+    padding: 30px 0px;
 }
 
 html {
@@ -34,6 +33,7 @@ html {
 
 body {
     background: #EBF5FF;
+    background:linear-gradient(45deg, #11A49B, #90FC8E);
 }
 
 main {
