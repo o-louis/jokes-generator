@@ -1,38 +1,190 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap');
+
+/* General */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style-type: none;
+    list-style: none;
+    border: none;
+    font-family: 'Poppins', sans-serif;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+a {
+    color: inherit;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+#root {
+    width: 100vw;
+    height: 100vh;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    
+    background:linear-gradient(45deg, #11A49B, #90FC8E);
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+body {
+    background: #EBF5FF;
 }
 
-.App-link {
-  color: #61dafb;
+main {
+    width: 80%;
+    max-width: 1000px;
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* Menu */
+aside {
+    width: 100%;
+    height: auto;
+}
+aside ul {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(100px,1fr));
+    grid-gap: 5px 5px;
+}
+aside ul li {
+    padding: 10px 0;
+    text-transform: capitalize;
+    text-align: center;
+    background: white;
+    transition: background 0.3s ease;
+    cursor: pointer;
+}
+
+aside ul li:hover  {
+    background: #eeeeee;
+}
+
+aside ul li.selected {
+    background: #59A7F2;
+    color: white;
+}
+
+hr {
+    width: 100%;
+    display: block;
+    height: 1px;
+    background-color: #eeeeee;
+}
+
+/* Section */
+section {
+    position: relative;
+    padding: 50px 20px 20px;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+/* Search */
+form {
+    position: absolute;
+    right: 20px;
+    display: none;
+}
+
+form input {
+    background-color: #F1F5FA;
+    padding: 8px 10px;
+    border-radius: 5px;
+}
+
+/* Content */
+h1 {
+    font-size: 2rem;
+    color: #59A7F2;
+}
+
+h2 {
+    margin-top: 30px;
+}
+
+p.section {
+    margin-top: 10px;
+    color: #909090;
+    text-transform: capitalize;
+}
+
+p.joke {
+    line-height: 150%;
+    margin: 30px 0px;
+}
+
+/* Footer */
+footer {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+
+    font-size: 2.5rem;
+}
+
+footer > * {
+    cursor: pointer;
+}
+
+footer a {
+    color: #1DA1F2;
+}
+footer a:hover {
+    color: #171717;
+}
+
+footer > svg {
+    color: #70BF42;
+    transition: transform 0.2s ease;
+}
+
+footer > svg:hover {
+    color: black;
+    transform: scale(1.10) rotate(300deg);
+}
+
+/* media queries */
+@media (min-width: 768px) {
+    main {
+        display: flex;
+        height: 500px;
+        overflow: hidden;
+        width: 900px;
+    }
+
+    hr {
+        display: none;
+    }
+
+    aside {
+        overflow-y: scroll;
+        width: 300px;
+        height: 100%;
+    }
+
+    aside ul {
+        padding: 10px 0px;
+        grid-template-columns: 1fr;
+    }
+
+    section {
+        position: relative;
+        padding: 50px 40px 20px;
+        width: 600px;
+        height: 100%;
+    }
+
+    form {
+        display: flex;
+    }
+    p.joke {
+        height: 200px;
+    }
 }
