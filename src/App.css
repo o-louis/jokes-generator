@@ -41,6 +41,10 @@ main {
 }
 
 /* Menu */
+.loading {
+    color: white !important;
+}
+
 aside {
     width: 100%;
     height: auto;

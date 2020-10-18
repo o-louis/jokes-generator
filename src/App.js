@@ -100,7 +100,7 @@ function App() {
 
   if (!isLoaded) {
     return (
-      <h2>Loading...</h2>
+      <h2 className="loading">Loading...</h2>
     )
   }
 
